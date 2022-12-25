@@ -43,8 +43,6 @@ void swapAlternate(int arr[], int size)
 }
 int main()
 {
-    // int arr[5] = {1, 2, 3, 4, 5};
-    // swapAlternate(arr, 5);
     int n;
     cout << "Enter the size of array you want to create: ";
     cin >> n;
@@ -59,6 +57,18 @@ int main()
         cout << "Enter element no. " << i + 1 << ": ";
         cin >> arr[i];
     }
+    cout << "Original Array:" << endl
+         << "{";
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i];
+        if (i < n - 1)
+        {
+            cout << ", ";
+        }
+    }
+    cout << "}" << endl
+         << "Array Now:" << endl;
     swapAlternate(arr, n);
 
     return 0;
